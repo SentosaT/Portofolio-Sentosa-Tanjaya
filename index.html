@@ -3,217 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sentosa Tanjaya | Informatics Portfolio</title>
+    <title>Sentosa Tanjaya | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; }
-        .mono { font-family: 'JetBrains Mono', monospace; }
-        .tech-grid {
-            background-size: 40px 40px;
-            background-image: radial-gradient(circle, #22d3ee10 1px, transparent 1px);
-        }
-        .glass-card {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-        .glow-hover:hover {
-            border-color: #22d3ee;
-            box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
-<body class="bg-[#0b0f1a] text-gray-300 antialiased tech-grid">
+<body class="bg-gray-50 text-gray-800">
 
-    <header class="sticky top-0 z-50 bg-[#0b0f1a]/80 backdrop-blur-md border-b border-white/5">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-xl font-bold tracking-tighter text-white mono">
-                <span class="text-cyan-400">&lt;</span>SENTOSA<span class="text-cyan-400">/&gt;</span>
-            </h1>
-            <nav class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest mono">
-                <a href="#about" class="hover:text-cyan-400 transition">// About</a>
-                <a href="#projects" class="hover:text-cyan-400 transition">// Projects</a>
-                <a href="#certifications" class="hover:text-cyan-400 transition">// Certs</a>
-                <a href="#contact" class="hover:text-cyan-400 transition">// Contact</a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="max-w-5xl mx-auto px-6">
-        
-        <section id="about" class="py-24 flex flex-col items-start gap-6">
-            <div class="px-3 py-1 bg-cyan-500/10 border border-cyan-500/20 rounded text-cyan-400 text-xs font-bold mono tracking-widest uppercase">
-                Informatics Graduate • GPA 3.57/4.00
+    <nav class="bg-white shadow-sm fixed w-full z-10 top-0">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="font-bold text-xl text-blue-600">ST.</a>
+            <div class="space-x-6 hidden md:flex text-sm font-medium text-gray-600">
+                <a href="#about" class="hover:text-blue-600 transition">About</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+                <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
             </div>
-            <h2 class="text-5xl md:text-7xl font-extrabold text-white tracking-tight leading-none">
-                Sentosa Tanjaya. <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Backend Specialist.</span>
-            </h2>
-            <p class="text-lg text-gray-400 leading-relaxed max-w-2xl">
-                Bachelor of Informatics from <span class="text-white">Institut Informatika Indonesia</span>. 
-                I specialize in developing efficient web applications and secure payment integration systems[cite: 4]. 
-                Highly motivated to deliver well-documented and maintainable code.
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-20 px-4">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-5xl font-bold text-gray-900 mb-6">Hi, I'm Sentosa Tanjaya</h1>
+            <p class="text-xl text-gray-600 mb-8 font-light">Backend Developer | Informatics Graduate | Machine Learning Enthusiast</p>
+            <p class="text-gray-600 mb-10 max-w-2xl mx-auto">
+                I build robust web-based applications and integrate complex systems. Focused on delivering efficient, well-documented, and maintainable code.
             </p>
-            <div class="flex flex-wrap gap-4 pt-4">
-                <a href="asset/doc/CV_Sentosa%20Tanjaya(English).pdf" class="px-6 py-3 bg-cyan-500 text-[#0b0f1a] font-bold rounded shadow-[0_0_15px_rgba(34,211,238,0.4)] hover:bg-cyan-400 transition flex items-center gap-2">
-                    <i class="fa-solid fa-file-pdf"></i> DOWNLOAD_CV.EXE
-                </a>
-                <a href="https://github.com/RyuuouR" target="_blank" class="px-6 py-3 border border-white/10 hover:border-white/30 text-white font-semibold rounded transition flex items-center gap-2">
-                    <i class="fa-brands fa-github text-xl"></i> REPO_ACCESS
-                </a>
-            </div>
-        </section>
-
-        <section id="projects" class="py-20 border-t border-white/5">
-            <h3 class="text-2xl font-bold text-white mb-12 mono flex items-center gap-4">
-                <span class="text-cyan-400">01.</span> Academic_Builds
-            </h3>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="glass-card p-8 rounded-2xl glow-hover transition-all duration-300">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-cyan-500/10 rounded-lg text-cyan-400"><i class="fa-solid fa-warehouse text-xl"></i></div>
-                        <span class="mono text-[10px] text-gray-500">2021-2026</span>
-                    </div>
-                    <h4 class="text-xl font-bold text-white mb-3">Inventory Management System</h4>
-                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                        Comprehensive system for stock tracking, returns, and real-time reporting[cite: 11, 12]. Tested via <span class="text-white">Black Box Testing</span> methodology.
-                    </p>
-                    <div class="flex gap-2 text-[10px] font-bold text-cyan-400 uppercase tracking-widest mb-6 flex-wrap">
-                        <span class="px-2 py-1 bg-cyan-500/5 border border-cyan-500/10 rounded">Laravel</span>
-                        <span class="px-2 py-1 bg-cyan-500/5 border border-cyan-500/10 rounded">MySQL</span>
-                        <span class="px-2 py-1 bg-cyan-500/5 border border-cyan-500/10 rounded">PHP</span>
-                    </div>
-                </div>
-
-                <div class="glass-card p-8 rounded-2xl glow-hover transition-all duration-300">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-blue-500/10 rounded-lg text-blue-400"><i class="fa-solid fa-shield-halved text-xl"></i></div>
-                        <span class="mono text-[10px] text-gray-500">Integration</span>
-                    </div>
-                    <h4 class="text-xl font-bold text-white mb-3">Midtrans Payment Core</h4>
-                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                        Secure transaction implementation featuring payment status verification and voucher validation logic[cite: 14, 15].
-                    </p>
-                    <div class="flex gap-2 text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-6 flex-wrap">
-                        <span class="px-2 py-1 bg-blue-500/5 border border-blue-500/10 rounded">Midtrans_API</span>
-                        <span class="px-2 py-1 bg-blue-500/5 border border-blue-500/10 rounded">Security</span>
-                    </div>
-                </div>
-
-                <div class="glass-card p-8 rounded-2xl glow-hover transition-all duration-300">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-purple-500/10 rounded-lg text-purple-400"><i class="fa-solid fa-brain text-xl"></i></div>
-                        <span class="mono text-[10px] text-gray-500">Bangkit Academy</span>
-                    </div>
-                    <h4 class="text-xl font-bold text-white mb-3">ML Clothing Recommender</h4>
-                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                        Developed a recommendation system involving web scraping, data preprocessing, and model development.
-                    </p>
-                    <div class="flex gap-2 text-[10px] font-bold text-purple-400 uppercase tracking-widest mb-6 flex-wrap">
-                        <span class="px-2 py-1 bg-purple-500/5 border border-purple-500/10 rounded">Python</span>
-                        <span class="px-2 py-1 bg-purple-500/5 border border-purple-500/10 rounded">Scraping</span>
-                    </div>
-                </div>
-
-                <div class="glass-card p-8 rounded-2xl glow-hover transition-all duration-300">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="p-3 bg-orange-500/10 rounded-lg text-orange-400"><i class="fa-solid fa-gamepad text-xl"></i></div>
-                        <span class="mono text-[10px] text-gray-500">Game Dev</span>
-                    </div>
-                    <h4 class="text-xl font-bold text-white mb-3">2D Platformer Mechanics</h4>
-                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
-                        Basic game implementation using Unity, covering movement, collision detection, and level design[cite: 18].
-                    </p>
-                    <div class="flex gap-2 text-[10px] font-bold text-orange-400 uppercase tracking-widest mb-6 flex-wrap">
-                        <span class="px-2 py-1 bg-orange-500/5 border border-orange-500/10 rounded">Unity</span>
-                        <span class="px-2 py-1 bg-orange-500/5 border border-orange-500/10 rounded">C#</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="certifications" class="py-20 border-t border-white/5">
-            <h3 class="text-2xl font-bold text-white mb-12 mono flex items-center gap-4">
-                <span class="text-cyan-400">02.</span> Verified_Certifications
-            </h3>
-            <div class="space-y-4">
-                <div class="flex items-center gap-4 p-4 glass-card rounded-xl border-l-4 border-l-cyan-500">
-                    <div class="text-cyan-400 font-bold mono">87.3/100</div>
-                    <div>
-                        <h5 class="text-white font-bold">Bangkit Academy - Machine Learning [cite: 20]</h5>
-                        <p class="text-xs text-gray-500">900 hours intensive training [cite: 21]</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-4 p-4 glass-card rounded-xl border-l-4 border-l-blue-500">
-                    <div class="text-blue-400 font-bold mono">2024</div>
-                    <div>
-                        <h5 class="text-white font-bold">IELTS Test Report Form - IDP [cite: 28]</h5>
-                    </div>
-                </div>
-                <div class="flex items-center gap-4 p-4 glass-card rounded-xl border-l-4 border-l-orange-500">
-                    <div class="text-orange-400 font-bold mono">2022</div>
-                    <div>
-                        <h5 class="text-white font-bold">Oracle Academy - Database Programming with PL/SQL [cite: 29]</h5>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="py-20 border-t border-white/5">
-            <h3 class="text-2xl font-bold text-white mb-12 mono flex items-center gap-4">
-                <span class="text-cyan-400">03.</span> Skill_Matrix
-            </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
-                <div>
-                    <h4 class="text-white mono mb-6 text-sm">// Hard_Skills</h4>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-sm mono">Laravel</span>
-                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-sm mono">PHP</span>
-                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-sm mono">MySQL</span>
-                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-sm mono">Git</span>
-                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-sm mono">Tailwind</span>
-                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-sm mono">MSSQL</span>
-                        <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-md text-sm mono">System_Documentation</span>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="text-white mono mb-6 text-sm">// Soft_Skills</h4>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="px-3 py-1 bg-cyan-500/5 border border-cyan-500/20 rounded-md text-sm text-cyan-400">Analytical_Thinking</span>
-                        <span class="px-3 py-1 bg-cyan-500/5 border border-cyan-500/20 rounded-md text-sm text-cyan-400">Problem_Solving</span>
-                        <span class="px-3 py-1 bg-cyan-500/5 border border-cyan-500/20 rounded-md text-sm text-cyan-400">Adaptability</span>
-                        <span class="px-3 py-1 bg-cyan-500/5 border border-cyan-500/20 rounded-md text-sm text-cyan-400">Time_Management</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer id="contact" class="mt-20 border-t border-white/5 py-16 bg-[#080b13]">
-        <div class="max-w-5xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-                <h3 class="text-3xl font-bold text-white mb-4 tracking-tighter">Initiate Collaboration.</h3>
-                <p class="text-gray-500 mb-8 max-w-sm">Based in <span class="text-white">Surabaya, Indonesia</span>[cite: 3]. Available for Backend Engineering roles worldwide.</p>
-                <div class="flex gap-6">
-                    <a href="https://github.com/RyuuouR" class="text-2xl text-gray-500 hover:text-white transition"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.instagram.com/sentosa_tjy/" class="text-2xl text-gray-500 hover:text-white transition"><i class="fa-brands fa-instagram"></i></a>
-                </div>
-            </div>
-            <div class="flex flex-col gap-4 text-sm mono">
-                <a href="mailto:sentosa,taken@gmail.com" class="flex items-center gap-3 p-4 glass-card rounded-xl hover:border-cyan-500 transition">
-                    <i class="fa-solid fa-envelope text-cyan-400"></i> sentosa,taken@gmail.com [cite: 2]
-                </a>
-                <a href="https://wa.me/628137947722" target="_blank" class="flex items-center gap-3 p-4 glass-card rounded-xl hover:border-cyan-500 transition">
-                    <i class="fa-solid fa-phone text-cyan-400"></i> +62 813-7947-722 [cite: 2]
+            <div class="flex justify-center space-x-4">
+                <a href="#projects" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition shadow-lg">View My Work</a>
+                <a href="https://github.com/RyuuouR" target="_blank" class="bg-gray-800 text-white px-6 py-3 rounded-lg font-medium hover:bg-gray-900 transition flex items-center shadow-lg">
+                    <i class="fab fa-github mr-2"></i> GitHub
                 </a>
             </div>
         </div>
-        <div class="max-w-5xl mx-auto px-6 mt-16 pt-8 border-t border-white/5 flex justify-between items-center text-[10px] uppercase tracking-[0.2em] text-gray-600 mono">
-            <span>&copy; 2026 Sentosa Tanjaya [cite: 1]</span>
-            <span>Ref: V1.CV.ALIGNED</span>
+    </section>
+
+    <section id="about" class="py-20 bg-white px-4">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-6">About Me</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Highly motivated to contribute to development teams through strong backend expertise and real-world project experience. I enjoy solving complex problems, whether it involves structuring a relational database or preprocessing data for machine learning models.
+                </p>
+            </div>
+            <div class="bg-gray-50 p-8 rounded-xl border border-gray-100 shadow-sm">
+                <h3 class="text-xl font-bold text-gray-900 mb-4"><i class="fas fa-graduation-cap text-blue-600 mr-2"></i> Education</h3>
+                <div class="mb-4">
+                    <h4 class="font-semibold text-lg text-gray-800">Institut Informatika Indonesia Surabaya</h4>
+                    <p class="text-gray-600">Bachelor of Informatics</p>
+                    <div class="flex justify-between items-center mt-2 text-sm text-gray-500">
+                        <span>2021 - 2026</span>
+                        <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded font-semibold">GPA: 3.57/4.00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-gray-50 px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Technical Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-medium text-gray-700 hover:border-blue-300 transition">Laravel / PHP</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-medium text-gray-700 hover:border-blue-300 transition">MySQL / SQL Server</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-medium text-gray-700 hover:border-blue-300 transition">Python</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-medium text-gray-700 hover:border-blue-300 transition">Machine Learning</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-medium text-gray-700 hover:border-blue-300 transition">HTML / CSS / Tailwind</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-medium text-gray-700 hover:border-blue-300 transition">JavaScript</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-medium text-gray-700 hover:border-blue-300 transition">Git & GitHub</div>
+                <div class="bg-white p-4 rounded-lg shadow-sm border border-gray-100 font-medium text-gray-700 hover:border-blue-300 transition">System Documentation</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-white px-4">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Featured Projects</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                
+                <div class="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-900">Web-Based Inventory System</h3>
+                        <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold">Laravel & MySQL</span>
+                    </div>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        A comprehensive system to manage stock, incoming/outgoing goods, and returns. Implemented real-time stock tracking and automated reporting. System testing conducted using Black Box Testing.
+                    </p>
+                </div>
+
+                <div class="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-900">Midtrans Payment Integration</h3>
+                        <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold">PHP</span>
+                    </div>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Integrated the Midtrans API into a web application to enable secure online transactions. Developed logic for payment status verification, transaction processing, and voucher validation.
+                    </p>
+                </div>
+
+                <div class="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-900">Clothing Recommendation System</h3>
+                        <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold">Python</span>
+                    </div>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        A machine learning-based capstone project. Managed web scraping for data collection, intensive data preprocessing, and model development within a cross-functional team setup.
+                    </p>
+                </div>
+
+                <div class="border border-gray-200 rounded-xl p-6 hover:shadow-lg transition">
+                    <div class="flex justify-between items-start mb-4">
+                        <h3 class="text-xl font-bold text-gray-900">2D Platformer Game</h3>
+                        <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded font-semibold">Unity & C#</span>
+                    </div>
+                    <p class="text-gray-600 mb-4 text-sm">
+                        Developed a basic 2D platformer implementing core gameplay mechanics such as player movement, collision detection, and level design.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-gray-50 px-4">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Certifications</h2>
+            <div class="space-y-4">
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex items-center justify-between">
+                    <div>
+                        <h4 class="font-bold text-gray-800">Machine Learning Certification</h4>
+                        <p class="text-sm text-gray-500">BANGKIT Academy | Score: 87.3/100 (900 hours)</p>
+                    </div>
+                    <span class="text-gray-400"><i class="fas fa-award fa-2x"></i></span>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-sm border border-gray-100 flex items-center justify-between">
+                    <div>
+                        <h4 class="font-bold text-gray-800">Database Programming with PL/SQL</h4>
+                        <p class="text-sm text-gray-500">Oracle Academy</p>
+                    </div>
+                    <span class="text-gray-400"><i class="fas fa-database fa-2x"></i></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h2 class="text-2xl font-bold mb-6">Let's Connect</h2>
+            <p class="text-gray-400 mb-8 max-w-xl mx-auto">
+                Currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!
+            </p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="mailto:sentosa,taken@gmail.com" class="text-gray-400 hover:text-white transition"><i class="fas fa-envelope fa-2x"></i></a>
+                <a href="https://github.com/RyuuouR" target="_blank" class="text-gray-400 hover:text-white transition"><i class="fab fa-github fa-2x"></i></a>
+                <a href="https://wa.me/628137947722" target="_blank" class="text-gray-400 hover:text-white transition"><i class="fab fa-whatsapp fa-2x"></i></a>
+            </div>
+            <div class="text-gray-500 text-sm">
+                <p>Surabaya, East Java, Indonesia</p>
+                <p class="mt-2">&copy; 2026 Sentosa Tanjaya. Built with Tailwind CSS.</p>
+            </div>
         </div>
     </footer>
 
