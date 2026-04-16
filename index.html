@@ -6,6 +6,7 @@
   <title>Sentosa Tanjaya — Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
   <style>
+    /* Your existing styles (unchanged) */
     :root {
       --bg: #0a0a0f;
       --bg2: #111118;
@@ -31,7 +32,6 @@
       overflow-x: hidden;
     }
 
-    /* ── NOISE OVERLAY ── */
     body::before {
       content: '';
       position: fixed;
@@ -42,7 +42,6 @@
       opacity: 0.5;
     }
 
-    /* ── NAV ── */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -79,7 +78,6 @@
     }
     .nav-links a:hover { color: var(--accent); }
 
-    /* ── HERO ── */
     .hero {
       min-height: 100vh;
       display: grid;
@@ -132,12 +130,8 @@
       color: var(--white);
       margin-bottom: 1rem;
     }
-    h1 .name-line {
-      display: block;
-    }
-    h1 .accent-name {
-      color: var(--accent);
-    }
+    h1 .name-line { display: block; }
+    h1 .accent-name { color: var(--accent); }
     .hero-sub {
       font-family: 'DM Mono', monospace;
       font-size: 0.88rem;
@@ -168,6 +162,7 @@
       transition: all 0.25s;
       cursor: pointer;
       border: none;
+      display: inline-block;
     }
     .btn-primary {
       background: var(--accent);
@@ -252,7 +247,6 @@
       color: var(--muted);
     }
 
-    /* ── SECTIONS ── */
     section { padding: 6rem 4rem; }
     .section-header {
       display: flex;
@@ -279,7 +273,6 @@
       background: var(--border);
     }
 
-    /* ── SKILLS SECTION ── */
     #skills { background: var(--bg); }
     .skills-grid {
       display: grid;
@@ -320,7 +313,6 @@
       color: var(--accent);
     }
 
-    /* ── EXPERIENCE / EDUCATION ── */
     #education { background: var(--bg2); }
     .timeline {
       position: relative;
@@ -375,26 +367,7 @@
       color: #a0a0c0;
       line-height: 1.75;
     }
-    .timeline-bullets {
-      margin-top: 0.75rem;
-      padding-left: 1rem;
-      list-style: none;
-    }
-    .timeline-bullets li {
-      position: relative;
-      font-size: 0.9rem;
-      color: #8888a8;
-      padding: 0.25rem 0;
-      padding-left: 1rem;
-    }
-    .timeline-bullets li::before {
-      content: '›';
-      position: absolute;
-      left: 0;
-      color: var(--accent);
-    }
 
-    /* ── PROJECTS ── */
     #projects { background: var(--bg); }
     .projects-grid {
       display: grid;
@@ -458,7 +431,6 @@
       border-radius: 2px;
     }
 
-    /* ── CERTIFICATIONS ── */
     #certifications { background: var(--bg2); }
     .cert-list {
       display: grid;
@@ -495,7 +467,6 @@
       letter-spacing: 0.05em;
     }
 
-    /* ── CONTACT ── */
     #contact {
       background: var(--bg);
       text-align: center;
@@ -545,7 +516,6 @@
       border-color: var(--accent);
     }
 
-    /* ── FOOTER ── */
     footer {
       border-top: 1px solid var(--border);
       padding: 1.5rem 4rem;
@@ -559,9 +529,7 @@
       color: var(--muted);
       letter-spacing: 0.05em;
     }
-    /* GPA badge removed from footer */
 
-    /* ── ANIMATIONS ── */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(30px); }
       to { opacity: 1; transform: translateY(0); }
@@ -580,7 +548,6 @@
       animation: fadeUp 0.9s 0.3s ease forwards;
     }
 
-    /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       nav { padding: 1rem 1.5rem; }
       .nav-links { gap: 1.5rem; }
@@ -595,11 +562,27 @@
       .cert-list { grid-template-columns: 1fr; }
       footer { padding: 1rem 1.5rem; flex-direction: column; gap: 0.5rem; text-align: center; }
     }
+
+    /* Fallback image style */
+    .hero-photo.error {
+      display: none;
+    }
+    .photo-fallback {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      aspect-ratio: 1;
+      background: var(--surface);
+      border-radius: 3px;
+      font-size: 4rem;
+      color: var(--accent);
+      font-family: 'DM Mono', monospace;
+    }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
     <div class="nav-logo">ST<span>.</span></div>
     <ul class="nav-links">
@@ -611,7 +594,6 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
   <section class="hero" id="home">
     <div class="hero-text">
       <div class="hero-tag">Available for opportunities</div>
@@ -619,7 +601,6 @@
         <span class="name-line">Sentosa</span>
         <span class="name-line accent-name">Tanjaya</span>
       </h1>
-      <!-- "& ML Engineer" removed -->
       <div class="hero-sub">Backend Developer · Surabaya, ID</div>
       <p class="hero-bio">
         Bachelor of Informatics with hands-on experience building web applications and payment integration systems. Passionate about clean, efficient, and well-documented backend code using PHP, Laravel, and MySQL.
@@ -627,12 +608,12 @@
       <div class="hero-ctas">
         <a href="mailto:sentosa.taken@gmail.com" class="btn btn-primary">Get in Touch</a>
         <a href="https://github.com/SentosaT" target="_blank" class="btn btn-outline">GitHub ↗</a>
-        <a href="/asset/doc/CV_Sentosa Tanjaya(English).pdf" download class="btn btn-outline">📄 Download CV</a>
+        <button id="downloadCvBtn" class="btn btn-outline">📄 Download CV</button>
       </div>
     </div>
     <div class="hero-photo-wrap">
-      <div class="hero-photo-inner">
-        <img src="/asset/doc/mySelf.png" alt="Sentosa Tanjaya" class="hero-photo" />
+      <div class="hero-photo-inner" id="photoContainer">
+        <img src="asset/doc/mySelf.png" alt="Sentosa Tanjaya" class="hero-photo" id="profilePhoto" onerror="handleImageError()" />
       </div>
       <div class="hero-stats">
         <div class="stat-card">
@@ -651,7 +632,6 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
   <section id="skills">
     <div class="section-header">
       <span class="section-num">01</span>
@@ -693,7 +673,6 @@
     </div>
   </section>
 
-  <!-- EDUCATION -->
   <section id="education">
     <div class="section-header">
       <span class="section-num">02</span>
@@ -718,7 +697,6 @@
     </div>
   </section>
 
-  <!-- PROJECTS -->
   <section id="projects">
     <div class="section-header">
       <span class="section-num">03</span>
@@ -730,49 +708,31 @@
         <span class="project-icon">📦</span>
         <div class="project-name">Inventory Management System</div>
         <div class="project-desc">Web-based system to manage stock, incoming/outgoing goods, and returns. Features purchase &amp; sales reports and real-time stock tracking with Black Box Testing.</div>
-        <div class="project-stack">
-          <span class="stack-tag">Laravel</span>
-          <span class="stack-tag">PHP</span>
-          <span class="stack-tag">MySQL</span>
-        </div>
+        <div class="project-stack"><span class="stack-tag">Laravel</span><span class="stack-tag">PHP</span><span class="stack-tag">MySQL</span></div>
       </div>
       <div class="project-card">
         <span class="project-icon">💳</span>
         <div class="project-name">Midtrans Payment Integration</div>
         <div class="project-desc">Integrated Midtrans payment gateway into a web application enabling secure online transactions with payment status verification, processing, and voucher validation.</div>
-        <div class="project-stack">
-          <span class="stack-tag">PHP</span>
-          <span class="stack-tag">MySQL</span>
-          <span class="stack-tag">Midtrans API</span>
-        </div>
+        <div class="project-stack"><span class="stack-tag">PHP</span><span class="stack-tag">MySQL</span><span class="stack-tag">Midtrans API</span></div>
       </div>
       <div class="project-card">
         <span class="project-icon">👔</span>
         <div class="project-name">ML Clothing Recommender</div>
         <div class="project-desc">Machine learning–based clothing recommendation system built during BANGKIT Academy involving web scraping, data preprocessing, and predictive model development.</div>
-        <div class="project-stack">
-          <span class="stack-tag">Python</span>
-          <span class="stack-tag">ML</span>
-          <span class="stack-tag">Web Scraping</span>
-        </div>
+        <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">ML</span><span class="stack-tag">Web Scraping</span></div>
       </div>
       <div class="project-card">
         <span class="project-icon">📚</span>
         <div class="project-name">Library Database System</div>
         <div class="project-desc">Designed and implemented a comprehensive library database using Microsoft SQL Server with structured schema design and PL/SQL procedures.</div>
-        <div class="project-stack">
-          <span class="stack-tag">MS SQL Server</span>
-          <span class="stack-tag">PL/SQL</span>
-        </div>
+        <div class="project-stack"><span class="stack-tag">MS SQL Server</span><span class="stack-tag">PL/SQL</span></div>
       </div>
       <div class="project-card">
         <span class="project-icon">🎮</span>
         <div class="project-name">2D Platformer Game</div>
         <div class="project-desc">Developed a 2D platformer game in Unity implementing core mechanics including player movement, collision detection, and level design.</div>
-        <div class="project-stack">
-          <span class="stack-tag">Unity</span>
-          <span class="stack-tag">C#</span>
-        </div>
+        <div class="project-stack"><span class="stack-tag">Unity</span><span class="stack-tag">C#</span></div>
       </div>
     </div>
     <div style="margin-top:2.5rem; text-align:center;">
@@ -781,7 +741,6 @@
     </div>
   </section>
 
-  <!-- CERTIFICATIONS -->
   <section id="certifications">
     <div class="section-header">
       <span class="section-num">04</span>
@@ -789,31 +748,12 @@
       <div class="section-line"></div>
     </div>
     <div class="cert-list">
-      <div class="cert-item">
-        <div class="cert-icon">🌍</div>
-        <div>
-          <div class="cert-name">IELTS Test Report Form</div>
-          <div class="cert-issuer">IDP · No. 23ID500615TANS405A · 2024</div>
-        </div>
-      </div>
-      <div class="cert-item">
-        <div class="cert-icon">🎓</div>
-        <div>
-          <div class="cert-name">BANGKIT Certificate of Completion</div>
-          <div class="cert-issuer">Kampus Merdeka · No. BA23/GRAD/XXIV-01/M108BSY0974 · 2023</div>
-        </div>
-      </div>
-      <div class="cert-item">
-        <div class="cert-icon">🗄️</div>
-        <div>
-          <div class="cert-name">Database Programming with PL/SQL</div>
-          <div class="cert-issuer">Oracle Academy · Certificate of Completion · Dec 2022</div>
-        </div>
-      </div>
+      <div class="cert-item"><div class="cert-icon">🌍</div><div><div class="cert-name">IELTS Test Report Form</div><div class="cert-issuer">IDP · No. 23ID500615TANS405A · 2024</div></div></div>
+      <div class="cert-item"><div class="cert-icon">🎓</div><div><div class="cert-name">BANGKIT Certificate of Completion</div><div class="cert-issuer">Kampus Merdeka · No. BA23/GRAD/XXIV-01/M108BSY0974 · 2023</div></div></div>
+      <div class="cert-item"><div class="cert-icon">🗄️</div><div><div class="cert-name">Database Programming with PL/SQL</div><div class="cert-issuer">Oracle Academy · Certificate of Completion · Dec 2022</div></div></div>
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
     <div class="section-header" style="justify-content:center; margin-bottom:2rem;">
       <span class="section-num">05</span>
@@ -829,11 +769,55 @@
     </div>
   </section>
 
-  <!-- FOOTER (GPA removed) -->
   <footer>
     <p>© 2025 Sentosa Tanjaya · Surabaya, East Java, Indonesia</p>
-    <!-- GPA badge removed -->
   </footer>
 
+  <script>
+    // Handle image loading error - show a nice fallback
+    function handleImageError() {
+      const img = document.getElementById('profilePhoto');
+      const container = document.getElementById('photoContainer');
+      if (img && container) {
+        img.style.display = 'none';
+        const fallback = document.createElement('div');
+        fallback.className = 'photo-fallback';
+        fallback.innerText = '📷';
+        container.appendChild(fallback);
+      }
+    }
+
+    // Robust download function with fallback
+    const downloadBtn = document.getElementById('downloadCvBtn');
+    const cvPath = 'asset/doc/CV_Sentosa Tanjaya (English).pdf';
+
+    async function downloadCV() {
+      try {
+        const response = await fetch(cvPath, { method: 'HEAD' });
+        if (response.ok) {
+          // File exists - trigger download
+          const link = document.createElement('a');
+          link.href = cvPath;
+          link.download = 'CV_Sentosa_Tanjaya(English).pdf';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+        } else {
+          // File not found - alert user with instructions
+          alert('CV file not found at: ' + cvPath + '\n\nPlease ensure the PDF is placed in the "/asset/doc/" folder with the exact filename:\nCV_Sentosa Tanjaya (English).pdf');
+        }
+      } catch (error) {
+        console.error('Download error:', error);
+        alert('Unable to access the CV file. Please check the file path.\n\nExpected location: ' + cvPath);
+      }
+    }
+
+    if (downloadBtn) {
+      downloadBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        downloadCV();
+      });
+    }
+  </script>
 </body>
 </html>
